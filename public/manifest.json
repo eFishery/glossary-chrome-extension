@@ -1,0 +1,23 @@
+{
+  "name": "Medium Extension",
+  "description": "This extension is made for demonstration purposes",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+     "activeTab",
+     "scripting",
+      "tabs"
+  ],
+  "content_scripts": [
+   {
+     "matches": [
+       "*://*/*"
+     ],
+     "js": ["content.js"]
+   }
+  ],
+  "background": {
+     "service_worker": "background.js"
+  },
+  "action": {}
+}
